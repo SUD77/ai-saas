@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 import { Menu } from "lucide-react";
 
 const Navbar = () => {
@@ -8,6 +9,10 @@ const Navbar = () => {
       className="md:hidden">
         <Menu />
       </Button>
+
+      <div className="flex w-full justify-end">
+        <UserButton afterSignOutUrl="/" />   {/* This button shows the currenly logged in user */}     
+      </div>
     </div>
   );
 }
