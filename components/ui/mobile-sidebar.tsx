@@ -8,20 +8,17 @@ import Sidebar from "@/components/sidebar";
 import { useEffect, useState } from "react";
 
 const MobileSideBar = () => {
-
-
-  // Start :  To fix Hydration error 
+  // Start :  To fix Hydration error
   const [isMounted, setIsMounted] = useState(false);
-  
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
-  
-  if(!isMounted){
+
+  if (!isMounted) {
     return null;
   }
   // End : To fix Hydration error
-
 
   return (
     <Sheet>
